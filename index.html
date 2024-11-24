@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirBnb Home</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <img class="nav__img" src="./images/logo.png" alt="Logo">
+            <button class="btn btn--primary nav__btn">
+                Get Started
+                <div class="btn__glow"></div>
+            </button>
+        </nav>
+    </header>
+    <section class="block block--hero grid grid--1x2">
+        <div data-aos="fade-right">
+            <div class="hero__text">
+                <div class="progress__display">
+                    <h3 class="progress__display__title">AirBnb it.</h3>
+                    <h3 class="progress__display__simple">You could earn</h3>
+                    <h3 class="progress__display__dynamic"></h3>
+                    <h4 class="progress__calculation__description">
+                        <span>1 day</span> at an estimated $110 CAD per night
+                    </h4>
+                </div>
+                <div class="draggable__progress-bar">
+                    <div class="draggable__progress-bar__progress"></div>
+                    <div class="progress__nights">1 Day</div>
+                    <div class="draggable__progress-bar__button"></div>
+                </div>
+                <p class="hero__link">Learn how we <a href="#">estimate earnings</a></p>
+            </div>
+            <div class="input-group">
+                <svg id="Layer_1" data-name="Layer 1"
+                     class="icon icon--primary"
+                     xmlns="http://www.w3.org/2000/svg" 
+                     viewBox="0 0 21.8 23.8"><defs></defs>
+                     <path class="cls-1" 
+                     d="M11,17.9a8.7,8.7,0,0,0,.8,4.8,1,
+                        1,0,0,0,1.2.4.8.8,0,0,0,.4-1.2,
+                        8.3,8.3,0,0,1-.7-3.8,7.6,7.6,0,0,1,
+                        15.2,1.1A7.7,7.7,0,0,1,16.1,25a.8.8,
+                        0,0,0-1.2.2.9.9,0,0,0,.2,1.3A10,10,0,
+                        0,0,19.6,28a9.3,9.3,0,0,0,6.1-1.7l5.5,
+                        6.4a.9.9,0,0,0,.6.3.7.7,0,0,0,.7-.2.9.9,
+                        0,0,0,.1-1.2L27,25.2a8.9,8.9,0,0,0,
+                        2.6-5.8A9.3,9.3,0,1,0,11,17.9Z" 
+                        transform="translate(-10.9 -9.3)"/></svg>
+                    <input type="text" class="input" placeholder="Enter your city">
+            </div>
+        </div>
+        <img class="hero__image" src="./images/maps.png" alt="Map Image" data-aos="fade-left">
+    </section>
+    <section class="block block--cohosts" data-aos="fade-up">
+        <header class="block__header">
+            <h3 class="block__heading">Meet some of our Co-hosts across the world</h3>
+        </header>
+        <section class="cards__group horizontal-scroll-container scroll-left">
+            <div class="card">
+                <img class="card__img" src="/images/mariam.avif" alt="Mariam">
+                <h3 class="card__heading">Mariam</h3>
+                <h4 class="card__text">Co-Host in Los Angeles, USA</h4>
+                <div class="card__info">
+                    <div class="card__info__rating">
+                        <h3>4.96</h3>
+                        <p>guest rating</p>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__info__years">
+                        <h3>4</h3>
+                        <p>years hosting</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="/images/donovan.jpg" alt="Donovan">
+                <h3 class="card__heading">Donavon</h3>
+                <h4 class="card__text">Co-Host in Manhattan, USA</h4>
+                <div class="card__info">
+                    <div class="card__info__rating">
+                        <h3>4.93</h3>
+                        <p>guest rating</p>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__info__years">
+                        <h3>7</h3>
+                        <p>years hosting</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="/images/emily.jpg" alt="Emily">
+                <h3 class="card__heading">Emily</h3>
+                <h4 class="card__text">Co-Host in Toronto, Canada</h4>
+                <div class="card__info">
+                    <div class="card__info__rating">
+                        <h3>4.91</h3>
+                        <p>guest rating</p>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__info__years">
+                        <h3>2</h3>
+                        <p>years hosting</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="/images/tiffany.jpg" alt="Tiffany">
+                <h3 class="card__heading">Tiffany</h3>
+                <h4 class="card__text">Co-Host in Berlin, Germany</h4>
+                <div class="card__info">
+                    <div class="card__info__rating">
+                        <h3>4.99</h3>
+                        <p>guest rating</p>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__info__years">
+                        <h3>5</h3>
+                        <p>years hosting</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="/images/eddie.jpg" alt="Eddie">
+                <h3 class="card__heading">Eddie</h3>
+                <h4 class="card__text">Co-Host in London, England</h4>
+                <div class="card__info">
+                    <div class="card__info__rating">
+                        <h3>4.98</h3>
+                        <p>guest rating</p>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__info__years">
+                        <h3>7</h3>
+                        <p>years hosting</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="/images/rachel.jpg" alt="Rachel">
+                <h3 class="card__heading">Rachel</h3>
+                <h4 class="card__text">Co-Host in Alaska, USA</h4>
+                <div class="card__info">
+                    <div class="card__info__rating">
+                        <h3>5.00</h3>
+                        <p>guest rating</p>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__info__years">
+                        <h3>1</h3>
+                        <p>years hosting</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="/images/eric.jpg" alt="Eric">
+                <h3 class="card__heading">Tony</h3>
+                <h4 class="card__text">Co-Host in Milan, Italy</h4>
+                <div class="card__info">
+                    <div class="card__info__rating">
+                        <h3>4.90</h3>
+                        <p>guest rating</p>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__info__years">
+                        <h3>3</h3>
+                        <p>years hosting</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="/images/vankesh.jpg" alt="Vankesh">
+                <h3 class="card__heading">Vankesh</h3>
+                <h4 class="card__text">Co-Host in Mumbai, India</h4>
+                <div class="card__info">
+                    <div class="card__info__rating">
+                        <h3>4.01</h3>
+                        <p>guest rating</p>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__info__years">
+                        <h3>2</h3>
+                        <p>years hosting</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="/images/michelle.jpg" alt="Michelle">
+                <h3 class="card__heading">Michelle</h3>
+                <h4 class="card__text">Co-Host in Vancouver, Canada</h4>
+                <div class="card__info">
+                    <div class="card__info__rating">
+                        <h3>4.93</h3>
+                        <p>guest rating</p>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__info__years">
+                        <h3>6</h3>
+                        <p>years hosting</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="/images/Doreen.jpg" alt="Doreen">
+                <h3 class="card__heading">Doreen</h3>
+                <h4 class="card__text">Co-Host in Alaska, USA</h4>
+                <div class="card__info">
+                    <div class="card__info__rating">
+                        <h3>4.55</h3>
+                        <p>guest rating</p>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__info__years">
+                        <h3>4</h3>
+                        <p>years hosting</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="block block--tag" data-aos="fade-up">
+        <div class="icon--lists">
+            <div class="tag">
+                <span class="icon-container tag__icon">
+                    <svg class="icon">
+                        <use xlink:href="icons/airsprites.svg#home"></use>
+                    </svg>
+                </span>
+                <h3 class="tag__heading">Create a listing for your place in just a few steps</h3>
+            </div>
+            <div class="tag">
+                <span class="icon-container tag__icon">
+                    <svg class="icon">
+                        <use xlink:href="icons/airsprites.svg#home"></use>
+                    </svg>
+                </span>
+                <h3 class="tag__heading">Create a listing for your place in just a few steps</h3>
+            </div>
+            <div class="tag">
+                <span class="icon-container tag__icon">
+                    <svg class="icon">
+                        <use xlink:href="icons/airsprites.svg#home"></use>
+                    </svg>
+                </span>
+                <h3 class="tag__heading">Create a listing for your place in just a few steps</h3>
+            </div>
+        </div>
+        <button class="btn btn--black tag__btn">List your home</button>
+    </section>
+    <section class="callout container" data-aos="fade-up">
+        <img class="banner__image" src="../images//hosts.webp" alt="Hosts">
+        <div class="grid grid--1x3">
+            <div class="callout__component">
+                <h3 class="callout__heading">One-to-one guidance from superhost</h3>
+                <p class="callout__text">
+                    We'll match your with a Superhost in your area. who'll guide your from your
+                    first question to your first guest--by phone, video call, or chat.
+                </p>
+            </div> 
+            <div class="callout__component">
+                <h3 class="callout__heading">One-to-one guidance from superhost</h3>
+                <p class="callout__text">
+                    We'll match your with a Superhost in your area. who'll guide your from your
+                    first question to your first guest--by phone, video call, or chat.
+                </p>
+            </div> 
+            <div class="callout__component">
+                <h3 class="callout__heading">One-to-one guidance from superhost</h3>
+                <p class="callout__text">
+                    We'll match your with a Superhost in your area. who'll guide your from your
+                    first question to your first guest--by phone, video call, or chat.
+                </p>
+            </div> 
+        </div> 
+    </section>
+    <section class="block block--medias container" data-aos="fade-up">
+        <header class='block__header medias__header'>
+            <h2>Co-hosts can do it all</h2>
+        </header>
+        <div class="grid grid--1x2 medias">
+            <div class="media">
+                <img class="media__img" src="./images/camera.webp" alt="Camera">
+                <div class="media__content">
+                    <h3 class="media__heading">Set up your listing</h3>
+                    <p class="media__description">Take photos, set prices, and create an arrival guide</p>
+                </div>
+            </div>
+            <div class="media">
+                <img class="media__img" src="./images/cleaner.webp" alt="Clean">
+                <div class="media__content">
+                    <h3 class="media__heading">Set up your listing</h3>
+                    <p class="media__description">Prepare, clean, and maintain your home</p>
+                </div>
+            </div>
+            <div class="media">
+                <img class="media__img" src="./images/calendar.webp" alt="calendar">
+                <div class="media__content">
+                    <h3 class="media__heading">Manage your reservations</h3>
+                    <p class="media__description">Stay on top of your bookings and guest meetings</p>
+                </div>
+            </div>
+            <div class="media">
+                <img class="media__img" src="./images/keys.webp" alt="Keys">
+                <div class="media__content">
+                    <h3 class="media__heading">Assist your guests</h3>
+                    <p class="media__description">Handle check-ins, checkouts, and on-site requests</p>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn--block btn--black medias__btn">Get Started</button>
+    </section>
+    <section class="features container" data-aos="fade-up">
+        <header class="features__header">
+            <img class="features__image" src="./images/aircover.webp" alt="">
+            <h3 class="features__heading">Airbnb it with top-to-bottom protection</h3>
+        </header>
+        <article class="feature__article">
+            <div class="article__content article__content__header">
+                <h3 class="article__heading"></h3>
+                <h4 class="article__heading__minor article__content__center">Airbnb</h4>
+                <h4 class="article__heading__minor article__content__center">Competitors</h4>
+            </div>
+        </article>
+        <article class="feature__article">
+            <div class="article__content">
+                <h3 class="article__heading">Guest identity verification</h3>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/cancelsprite.svg#cancel2-svgrepo-com"></use>
+                </svg>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/check-green-sprite.svg#check-green"></use>
+                </svg>
+            </div>
+            <p class="article__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, maiores</p>
+        </article>
+        <article class="feature__article">
+            <div class="article__content">
+                <h3 class="article__heading">Reservation Screening</h3>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/cancelsprite.svg#cancel2-svgrepo-com"></use>
+                </svg>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/check-green-sprite.svg#check-green"></use>
+                </svg>
+            </div>
+            <p class="article__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, maiores</p>
+        </article>
+        <article class="feature__article">
+            <div class="article__content">
+                <h3 class="article__heading">$3M USD Damage Protection</h3>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/cancelsprite.svg#cancel2-svgrepo-com"></use>
+                </svg>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/check-green-sprite.svg#check-green"></use>
+                </svg>
+            </div>
+            <p class="article__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, maiores</p>
+        </article>
+        <article class="feature__article">
+            <div class="article__content">
+                <h3 class="article__heading article__heading__minor">Art & Valuables</h3>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/cancelsprite.svg#cancel2-svgrepo-com"></use>
+                </svg>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/check-green-sprite.svg#check-green"></use>
+                </svg>
+            </div>
+        </article>
+        <article class="feature__article">
+            <div class="article__content">
+                <h3 class="article__heading article__heading__minor">Auto & Boat</h3>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/cancelsprite.svg#cancel2-svgrepo-com"></use>
+                </svg>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/check-green-sprite.svg#check-green"></use>
+                </svg>
+            </div>
+        </article>
+        <article class="feature__article">
+            <div class="article__content">
+                <h3 class="article__heading article__heading__minor">Pet Damage</h3>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/cancelsprite.svg#cancel2-svgrepo-com"></use>
+                </svg>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/check-green-sprite.svg#check-green"></use>
+                </svg>
+            </div>
+        </article>
+        <article class="feature__article">
+            <div class="article__content">
+                <h3 class="article__heading article__heading__minor">Income Loss</h3>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/cancelsprite.svg#cancel2-svgrepo-com"></use>
+                </svg>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/check-green-sprite.svg#check-green"></use>
+                </svg>
+            </div>
+        </article>
+        <article class="feature__article">
+            <div class="article__content">
+                <h3 class="article__heading article__heading__minor">Deep Cleaning</h3>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/cancelsprite.svg#cancel2-svgrepo-com"></use>
+                </svg>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/check-green-sprite.svg#check-green"></use>
+                </svg>
+            </div>
+        </article>
+        <article class="feature__article">
+            <div class="article__content">
+                <h3 class="article__heading">24-Hour Safety Line</h3>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/cancelsprite.svg#cancel2-svgrepo-com"></use>
+                </svg>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/check-green-sprite.svg#check-green"></use>
+                </svg>
+            </div>
+            <p class="article__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, dicta!</p>
+        </article>
+        <article class="feature__article">
+            <div class="article__content">
+                <h3 class="article__heading">$1M USD Liability Insurance</h3>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/cancelsprite.svg#cancel2-svgrepo-com"></use>
+                </svg>
+                <svg class="icon--large article__content__center">
+                    <use xlink:href="icons/check-green-sprite.svg#check-green"></use>
+                </svg>
+            </div>
+            <p class="article__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, voluptas!</p>
+        </article>
+        <div class="features__disclaimer">
+            <p class="article__description">
+                Comparision based on public information and free offerings by top Competitors as of 10/22.
+                <a class="feature__disclaimer__link" href="#">Find details and exclusions here</a>
+            </p>
+        </div>
+        <footer class="features__footer">
+            <button class="btn btn--transparent btn--less-rounded">Learn More</button>
+        </footer>
+    </section>
+    <section class="block block--questions questions" data-aos="fade-up">
+        <div class="container grid grid--1x2">
+            <div class="questions__header">
+                <h3 class="questions__heading">Your question, answered.</h3>
+            </div>
+            <div class="questions__collapsibles">
+                <div class="collapsible">
+                    <div class="collapsible__header">
+                        <h3 class="collapsible__heading">Is my place right for Airbnb?</h3>
+                        <svg class="icon icon--large collapsible__chevron">
+                            <use xlink:href="icons/chevron-sprite.svg#chevron"></use>
+                        </svg>
+                    </div>
+                    <div class="collapsible__content">
+                        <p class="collapsible__details">
+                            Airbnb guests are interested in all kinds of places. We have listings 
+                            for tiny homes, cabins, tree houses, and more. 
+                            Even a spare room can be a great place to stay.
+                        </p>
+                    </div>
+                </div>
+                <div class="collapsible">
+                    <div class="collapsible__header">
+                        <h3 class="collapsible__heading">Is my place right for Airbnb?</h3>
+                        <svg class="icon icon--large collapsible__chevron">
+                            <use xlink:href="icons/chevron-sprite.svg#chevron"></use>
+                        </svg>
+                    </div>
+                    <div class="collapsible__content">
+                        <p class="collapsible__details">
+                            Airbnb guests are interested in all kinds of places. We have listings 
+                            for tiny homes, cabins, tree houses, and more. 
+                            Even a spare room can be a great place to stay.
+                        </p>
+                    </div>
+                </div>
+                <div class="collapsible">
+                    <div class="collapsible__header">
+                        <h3 class="collapsible__heading">Is my place right for Airbnb?</h3>
+                        <svg class="icon icon--large collapsible__chevron">
+                            <use xlink:href="icons/chevron-sprite.svg#chevron"></use>
+                        </svg>
+                    </div>
+                    <div class="collapsible__content">
+                        <p class="collapsible__details">
+                            Airbnb guests are interested in all kinds of places. We have listings 
+                            for tiny homes, cabins, tree houses, and more. 
+                            Even a spare room can be a great place to stay.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </secton>
+    <section class="block block--more-questions">
+        <div class="container grid grid--1x2 more-questions">
+            <img class="more-questions__image" src="./images/more-questions.webp" alt="">
+            <div class="more-questions__content">
+                <h3 class="more-questions__content__heading">Still have more questions?</h3>
+                <p class="more-questions__content__description">Get answers from an experienced Superhost near you.</p>
+                <button class="btn btn--transparent btn--less-rounded">Match with a Superhost</button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__grid container--large">
+            <div class="footer__list">
+                <ul class="list">
+                    <li class="list__item">Support</li>
+                    <li class="list__item">Help Center</li>
+                    <li class="list__item">AirCover</li>
+                    <li class="list__item">Anti-discrimination</li>
+                    <li class="list__item">Disability Support</li>
+                    <li class="list__item">Cancellation Options</li>
+                    <li class="list__item">Report neighbourhood concern</li>
+                </ul>
+            </div>
+            <div class="footer__list">
+                <ul class="list">
+                    <li class="list__item">Hosting</li>
+                    <li class="list__item">Airbnb your home</li>
+                    <li class="list__item">AirCover for Hosts</li>
+                    <li class="list__item">Hosting resouces</li>
+                    <li class="list__item">Community Forum</li>
+                    <li class="list__item">Hosting responsibly</li>
+                    <li class="list__item">Join a free hosting class</li>
+                    <li class="list__item">Find a co-host</li>
+                </ul>
+            </div>
+            <div class="footer__list">
+                <ul class="list">
+                    <li class="list__item">Airbnb</li>
+                    <li class="list__item">Newsroom</li>
+                    <li class="list__item">New features</li>
+                    <li class="list__item">Careers</li>
+                    <li class="list__item">Investors</li>
+                    <li class="list__item">Gift cards</li>
+                    <li class="list__item">Airbnb.org emergency stays</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="footer__info__legal">
+                <h3 class="footer__info__heading">Englist (CA)    $ CAD</h3>
+                <p class="footer__info__text">2024 Airbnb, Inc.</p>
+                <span class="footer__links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Sitemap</a>
+                </span>
+            </div>
+            <div class="footer__socials">
+                <h3 class="footer__info__heading">Englist (CA)    $ CAD</h3>
+                <img class="footer__socials__icon" src="./images/instgram.png" alt="Instgram">
+                <img class="footer__socials__icon" src="./images/x.png" alt="X">
+                <img class="footer__socials__icon" src="./images/tiktok.png" alt="TikTok">
+            </div>
+        </div>
+    </footer>
+    <footer class="footer__variable">
+        <h3 class="footer__variable__heading">Ready to Airbnb it?</h3>
+        <button class="btn btn--primary btn--block btn--with-icon">
+            <svg class="icon icon--large">
+                <use xlink:href="icons/home-sprite.svg#home-hospital-svgrepo-com"></use>
+            </svg>
+            <div class="btn__glow"></div>
+            Airbnb Setup
+        </button>
+    </footer>
+    <script src="./javascript/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

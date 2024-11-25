@@ -8,7 +8,7 @@ let progressNights = document.documentElement.querySelector('.progress__nights')
 let calculationSteps = document.documentElement.querySelector('.progress__calculation__description')
 
 calculationHeading.style.fontSize = "4rem"
-calculationHeading.innerText = `$110 CAD`
+calculationHeading.innerText = `$160 CAD`
 let isDragging = false
 
 progressButton.addEventListener('mousedown', (e) => {
@@ -39,7 +39,7 @@ const calculateDays = (percentage) => {
 }
 
 const calculateRevenue = (days) => {
-    return days*11
+    return days*16
 }
 
 const renderDays = (days) => {
@@ -57,7 +57,7 @@ const renderNights = (days) => {
 }
 
 const renderCalculationSteps = (days) => {
-    return `<span>${days}</span> at an estimated $110 CAD per night `    
+    return `<span>${days}</span> at an estimated $160 CAD per night `    
 }
 
 document.addEventListener('mousemove', (e) => {
@@ -106,14 +106,22 @@ document.addEventListener('scroll', () => {
     leftScrollContainer.scrollLeft = scrollY
 
     let currentScroll = document.documentElement.scrollTop
-    navBar = document.querySelector('.nav')
+    const navBar = document.querySelector('.nav')
     if (currentScroll > 0)
         navBar.classList.add('nav__border')
     else
         navBar.classList.remove('nav__border')
 
+    const footerVariableHeading = document.querySelector('.footer__variable__heading')
+    const variableFooter = document.querySelector('.footer__variable')
+    if (currentScroll > 0) {
+        console.log(`Current Scroll ${currentScroll}`)
+        variableFooter.style.opacity = 1
+        variableFooter.style.bottom = 0
+    } else {
+        variableFooter.style.opacity = 0
+    }
     if (currentScroll > windowScroll) {
-        footerVariableHeading = document.querySelector('.footer__variable__heading')
         footerVariableHeading.style.display = "none"
     } else {
         footerVariableHeading.style.display = "inline-block"
@@ -147,7 +155,6 @@ primaryButton.forEach(button => {
         glowItem.style.opacity = '0';
         glowItem.style.top = '0'
         glowItem.style.left = '0'
-        console.log('Mouse Left')
     })
 })
 

@@ -154,6 +154,7 @@ p {
 
 .hero__image {
     width: 100%;
+    align-self: center;
 }
 
 /* Icons */
@@ -405,7 +406,11 @@ p {
 }
 
 .medias__header {
-    font-size: 1.8rem;
+    font-size: 1.8rem;;
+}
+
+.medias__header > h2 {
+    margin: 0;
 }
 
 .medias__btn {
@@ -451,7 +456,7 @@ p {
 
 .banner__image {
     width: 100%;
-    min-width: 500px;
+    min-width: 375px;
     object-position: center;
 }
 
@@ -500,7 +505,7 @@ p {
 
 .article__content {
     display: grid;
-    grid-template-columns: 300px 1fr 1fr;
+    grid-template-columns: 50% 1fr 1fr;
 }
 
 .article__content__center {
@@ -512,7 +517,6 @@ p {
     font-size: 2rem;
     margin: 0;
     margin-bottom: 1rem;
-    text-wrap: nowrap;
 }
 
 .article__heading__minor {
@@ -564,6 +568,7 @@ p {
 
 .collapsible__chevron {
     transform: rotate(180deg);
+    cursor: pointer;
 }
 
 .collapsible__content {
@@ -576,6 +581,7 @@ p {
 .collapsible__details {
     font-size: 1.5rem;
     margin-top: 0.5rem;
+    margin-bottom: 0;
 }
 
 .collapsible__expanded .collapsible__content {
@@ -599,7 +605,7 @@ p {
 }
 
 .questions__heading {
-    font-size: 3.5rem;
+    font-size: 5rem;
     margin: 0;
 }
 
@@ -617,11 +623,16 @@ p {
 
 .block--more-questions {
     background: var(--color-shade);
+    padding: 0
 }
 
 .more-questions {
     background: white;
-    padding: 1rem
+    padding: 0
+}
+
+.block--more-questions .btn {
+    margin-bottom: 1rem;
 }
 
 .more-questions__image {
@@ -763,7 +774,7 @@ p {
 
 .footer__variable {
     position: fixed;
-    bottom: 0;
+    bottom: -10%;
     left: 50%;
     transform: translateX(-50%);
     background-color: white;
@@ -773,10 +784,11 @@ p {
     align-items: center;
     padding: 1rem;
     width: 100%;
-    opacity: 1;
+    opacity: 0;
     overflow: show;
     max-height: 100vh;
     transition: all 0.3s;
+    z-index: 1000
 }
 
 .footer__variable__heading {
@@ -791,10 +803,10 @@ p {
 
 @media screen and (min-width: 768px) {
     .footer__variable {
-        opacity: 0;
         max-height: 0;
         overflow: hidden;
-        bottom: -10%
+        opacity: 0;
+        display: none;
     }
 }
 
@@ -849,6 +861,7 @@ p {
 .progress__display__title {
     color: var(--color-primary);
     font-size: 7rem;
+    line-height: 1;
 }
 
 
